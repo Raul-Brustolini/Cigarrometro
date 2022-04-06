@@ -1,20 +1,18 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<div class="d-flex flex-column text-center">
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <label for="cigarro" class="my-4">
+    Quantidade de cigarros por dia:
+  </label>
+  <input type="number" placeholder="Ex: 2" id="cigarro" [(ngModel)]="quantidadeCigarro">
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+  <label for="ano">
+    Quantidade de anos fumando
+  </label>
+  <input type="number" placeholder="Ex: 5" id="ano" [(ngModel)]="quantidadeAnoFumando">
+
+  <button class="btn btn-primary mt-4" (click)="calcularTempoVidaPerdido()">Calcular</button>
+
+  <h4>Tempo de vida perdido</h4>
+  <h2>{{tempoVidaPerdido}} minuto(s)</h2>
+
+</div>
